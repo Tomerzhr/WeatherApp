@@ -27,7 +27,7 @@ const searchBox = document.querySelector(".search") as HTMLInputElement
 export async function checkWeather(city: string) {
     const response = await fetch(apiURL + `key=${apikey}` + "&q=" + city + "&days=7&aqi=yes")
     let data = await response.json();
-    console.log(data);
+
 
     document.querySelector(".city")!.innerHTML = data.location.name;
     document.querySelector(".degrees")!.innerHTML = data.current.temp_c.toFixed(0) + "°";
@@ -59,7 +59,7 @@ export async function checkWeather(city: string) {
 
     const humidityArray = data.forecast.forecastday
     const humidity = humidityArray.map((humidity: any) => humidity.day.avghumidity)
-    console.log(humidity);
+
 
 
 

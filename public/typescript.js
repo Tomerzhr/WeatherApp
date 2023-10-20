@@ -30,7 +30,6 @@ export function checkWeather(city) {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield fetch(apiURL + `key=${apikey}` + "&q=" + city + "&days=7&aqi=yes");
         let data = yield response.json();
-        console.log(data);
         document.querySelector(".city").innerHTML = data.location.name;
         document.querySelector(".degrees").innerHTML = data.current.temp_c.toFixed(0) + "°";
         document.querySelector(".feels-like-degrees").innerHTML = data.current.feelslike_c + "°";
@@ -54,7 +53,6 @@ export function checkWeather(city) {
         const forecastWeatherIcons = forecastWeatherArray.map((icon) => icon.day.condition.text);
         const humidityArray = data.forecast.forecastday;
         const humidity = humidityArray.map((humidity) => humidity.day.avghumidity);
-        console.log(humidity);
         const forecastDay = document.querySelectorAll(".day");
         const forecastMonth = document.querySelectorAll(".date");
         const degrees = document.querySelectorAll(".degree-day");
