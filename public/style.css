@@ -138,6 +138,7 @@ body {
   color: white;
 }
 .weather-status {
+  max-width: 200px;
   font-size: 1.2rem;
   font-weight: 500;
 }
