@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="new weather app all around the world for free" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./typescript.js" defer></script>
+    <title>Weather App</title>
+</head>
+
+<body>
+    <main>
+        <section class="main-container">
+            <article class="top-menu">
+                <div class="search-button">
+                    <img class="search-btn" src="../img/search.png" alt="search" width="20" />
+                    <label>
+                        <input class="search" type="text">
+                    </label>
+                </div>
+
+                <div class="city-name">
+                    <img src="../img/location.png" alt="location" width="20" height="20" />
+                    <h2 class="city">Israel</h2>
+                </div>
+
+                <img class="profile-pic" src="../img/user.png" alt="user-pic" width="50" />
+            </article>
+
+            <article class="main-weather">
+                <div class="top-main-weather">
+                    <img class="weather-icon" src="../img/Weather Icons/sun-cloud.png" alt="weather icon" />
+                    <div class="main-degree">
+                        <h1 class="degrees">26°</h1>
+                        <p class="feels-like">Feels like
+                            <span class="feels-like-degrees">26°<span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bottom-main-weather">
+                    <div class="the-weather">
+                        <h2 class="weather-status">Sunny day</h2>
+                        <p class="main-date">Monday, 12 Feb</p>
+                    </div>
+                    <img src="../img/snow.png" alt="snow and wind" width="60" style="opacity: 0.3;">
+                </div>
+            </article>
+            <article class="air-quality">
+                <div class="top-area">
+
+                    <div class="title">
+                        <img src="../img/AirQuality/wind.png" alt="icon" width="25">
+                        <h2>Air Quality</h2>
+                    </div>
+                    <div class="reload-btn">
+                        <img src="../img/reload.png" alt="reload" width="15">
+                    </div>
+                </div>
+                <div class="weather-data">
+
+                    <div class="air-quality-data">
+                        <img src="../img/AirQuality/cloudy.png" alt="icon" width="20">
+                        <div class="data">
+                            <p>Real Feel</p>
+                            <p class="data-status real-feel">23.8</p>
+                        </div>
+                    </div>
+                    <div class="air-quality-data">
+                        <img src="../img/AirQuality/wind.png" alt="icon" width="20">
+                        <div class="data">
+                            <p>Wind</p>
+                            <p class="data-status wind">23.8</p>
+                        </div>
+                    </div>
+                    <div class="air-quality-data">
+                        <img src="../img/AirQuality/water-drops.png" alt="icon" width="20">
+                        <div class="data">
+                            <p>SO2</p>
+                            <p class="data-status so2">23.8</p>
+                        </div>
+                    </div>
+                    <div class="air-quality-data">
+                        <img src="../img/AirQuality/rainy.png" alt="icon" width="20">
+                        <div class="data">
+                            <p>Chance of rain</p>
+                            <p class="data-status chance-of-rain">23.8%</p>
+                        </div>
+                    </div>
+                    <div class="air-quality-data">
+                        <img src="../img/AirQuality/sunrise.png" alt="icon" width="20">
+                        <div class="data">
+                            <p>UV index</p>
+                            <p class="data-status uv-index">23.8</p>
+                        </div>
+                    </div>
+                    <div class="air-quality-data">
+                        <img src="../img/AirQuality/sea.png" alt="icon" width="20">
+                        <div class="data">
+                            <p>O3</p>
+                            <p class="data-status o3">23.8</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="weekly-forecast">
+                <h2>Weekly Forecast</h2>
+                <div class="weekly-container">
+
+                    <div class="day-container">
+                        <div class="day-date">
+                            <p class="day">Mon</p>
+                            <p class="date">13 Feb</p>
+                        </div>
+
+                        <img class="weather-forecast-icon" src="../img/Weather Icons/sun-cloud.png" alt="icon">
+                        <h3 class="degree-day">26°</h3>
+                        <div class="humidity high">
+                            <p class="heat-status">193</p>
+                        </div>
+                    </div>
+
+                    <div class="day-container selected-day">
+                        <div class="day-date">
+                            <p class="day">Tue</p>
+                            <p class="date">14 Feb</p>
+                        </div>
+
+                        <img class="weather-forecast-icon" src="../img/Weather Icons/sun-cloud.png" alt="icon">
+                        <h3 class="degree-day">21°</h3>
+                        <div class="humidity medium">
+                            <p class="heat-status">120</p>
+                        </div>
+                    </div>
+
+                    <div class="day-container">
+                        <div class="day-date">
+                            <p class="day">Wed</p>
+                            <p class="date">15 Feb</p>
+                        </div>
+
+                        <img class="weather-forecast-icon" src="../img/Weather Icons/rain2.png" alt="icon">
+                        <h3 class="degree-day">16°</h3>
+                        <div class="humidity low">
+                            <p class="heat-status">45</p>
+                        </div>
+                    </div>
+
+                    <div class="day-container">
+                        <div class="day-date">
+                            <p class="day">Thu</p>
+                            <p class="date">16 Feb</p>
+                        </div>
+
+                        <img class="weather-forecast-icon" src="../img/Weather Icons/rain2.png" alt="icon">
+                        <h3 class="degree-day">16°</h3>
+                        <div class="humidity low">
+                            <p class="heat-status">49</p>
+                        </div>
+                    </div>
+
+                    <div class="day-container">
+                        <div class="day-date">
+                            <p class="day">Fri</p>
+                            <p class="date">17 Feb</p>
+                        </div>
+
+                        <img class="weather-forecast-icon" src="../img/Weather Icons/sun.png" alt="icon">
+                        <h3 class="degree-day">29°</h3>
+                        <div class="humidity high">
+                            <p class="heat-status">193</p>
+                        </div>
+                    </div>
+
+                    <div class="day-container">
+                        <div class="day-date">
+                            <p class="day">Fri</p>
+                            <p class="date">17 Feb</p>
+                        </div>
+
+                        <img class="weather-forecast-icon" src="../img/Weather Icons/sun.png" alt="icon">
+                        <h3 class="degree-day">29°</h3>
+                        <div class="humidity high">
+                            <p class="heat-status">193</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
