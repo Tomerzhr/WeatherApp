@@ -21,7 +21,7 @@ searchButton.addEventListener('mouseleave', () => {
 
 
 const apikey = "ec2a3284705047ccae1152501230510"
-const apiURL = "http://api.weatherapi.com/v1/forecast.json?"
+const apiURL = "https://api.weatherapi.com/v1/forecast.json?"
 const searchBox = document.querySelector(".search") as HTMLInputElement
 
 export async function checkWeather(city: string) {

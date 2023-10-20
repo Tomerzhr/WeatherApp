@@ -24,7 +24,7 @@ searchButton.addEventListener('mouseleave', () => {
     setTimeout(() => { cityName.style.display = 'flex'; }, 400);
 });
 const apikey = "ec2a3284705047ccae1152501230510";
-const apiURL = "http://api.weatherapi.com/v1/forecast.json?";
+const apiURL = "https://api.weatherapi.com/v1/forecast.json?";
 const searchBox = document.querySelector(".search");
 export function checkWeather(city) {
     return __awaiter(this, void 0, void 0, function* () {
