@@ -36,14 +36,3 @@ export function weatherPicturesIcon(weatherText: string, weatherPictureElement: 
     }
 }
 
-export function humidityStatus(humidityElement: any, humidityDiv: any) {
-    if (humidityElement <= 50) {
-        humidityDiv.classList.add("low")
-    } else if (humidityElement > 50 && humidityElement <= 100) {
-        humidityDiv.classList.add("medium")
-    } else {
-        humidityDiv.classList.add("high");
-    }
-
-
-}

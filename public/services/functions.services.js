@@ -36,14 +36,3 @@ export function weatherPicturesIcon(weatherText, weatherPictureElement) {
         weatherPictureElement.src = "../img/Weather Icons/sun-cloud.png";
     }
 }
-export function humidityStatus(humidityElement, humidityDiv) {
-    if (humidityElement <= 50) {
-        humidityDiv.classList.add("low");
-    }
-    else if (humidityElement > 50 && humidityElement <= 100) {
-        humidityDiv.classList.add("medium");
-    }
-    else {
-        humidityDiv.classList.add("high");
-    }
-}

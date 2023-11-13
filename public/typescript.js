@@ -49,10 +49,12 @@ export function checkWeather(city) {
         const days = dateArray.map((day) => day.date_epoch);
         const degreeArray = data.forecast.forecastday;
         const degree = degreeArray.map((degree) => degree.day.avgtemp_c);
+        console.log(degreeArray);
         const forecastWeatherArray = data.forecast.forecastday;
         const forecastWeatherIcons = forecastWeatherArray.map((icon) => icon.day.condition.text);
         const humidityArray = data.forecast.forecastday;
         const humidity = humidityArray.map((humidity) => humidity.day.avghumidity);
+        console.log(humidity);
         const forecastDay = document.querySelectorAll(".day");
         const forecastMonth = document.querySelectorAll(".date");
         const degrees = document.querySelectorAll(".degree-day");
@@ -74,13 +76,13 @@ export function checkWeather(city) {
         for (let i = 0; i < humidityStatus.length; i++) {
             humidityStatus[i].innerHTML = humidity[i];
             if (humidity[i] <= 75) {
-                humidityDiv[i].classList.add("low");
+                humidityDiv[i].classList.replace("low", "low");
             }
             else if (humidity[i] > 75 && humidity[i] <= 90) {
-                humidityDiv[i].classList.add("medium");
+                humidityDiv[i].classList.replace("low", "medium");
             }
             else {
-                humidityDiv[i].classList.add("high");
+                humidityDiv[i].classList.add("low", "high");
             }
         }
         const weatherPictureElement = document.querySelector(".weather-icon");

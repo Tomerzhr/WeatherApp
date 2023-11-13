@@ -1,4 +1,4 @@
-import { dayConverter, humidityStatus, monthConverter, searchBoxOpen, weatherPicturesIcon } from "./services/functions.services.js";
+import { dayConverter, monthConverter, searchBoxOpen, weatherPicturesIcon } from "./services/functions.services.js";
 import { getTimeZone } from "./services/timezone.services.js";
 
 const searchButton = document.querySelector('.search-button') as HTMLDivElement;
@@ -48,17 +48,23 @@ export async function checkWeather(city: string) {
     document.querySelector(".o3")!.innerHTML = newO3;
 
 
+
     const dateArray = data.forecast.forecastday
     const days = dateArray.map((day: any) => day.date_epoch)
 
+
     const degreeArray = data.forecast.forecastday
     const degree = degreeArray.map((degree: any) => degree.day.avgtemp_c)
+    console.log(degreeArray);
+
 
     const forecastWeatherArray = data.forecast.forecastday
     const forecastWeatherIcons = forecastWeatherArray.map((icon: any) => icon.day.condition.text)
 
     const humidityArray = data.forecast.forecastday
     const humidity = humidityArray.map((humidity: any) => humidity.day.avghumidity)
+    console.log(humidity);
+
 
 
 
@@ -88,11 +94,11 @@ export async function checkWeather(city: string) {
     for (let i = 0; i < humidityStatus.length; i++) {
         humidityStatus[i].innerHTML = humidity[i]
         if (humidity[i] <= 75) {
-            humidityDiv[i].classList.add("low")
+            humidityDiv[i].classList.replace("low", "low")
         } else if (humidity[i] > 75 && humidity[i] <= 90) {
-            humidityDiv[i].classList.add("medium")
+            humidityDiv[i].classList.replace("low", "medium")
         } else {
-            humidityDiv[i].classList.add("high")
+            humidityDiv[i].classList.add("low", "high")
         }
     }
 
